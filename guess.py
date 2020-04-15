@@ -4,7 +4,8 @@ import random
 guessestaken = 0
 
 print("Hello, what is your name?")
-myName = input()
+name = input()
+myName = name.capitalize()
 
 number = random.randint(1,20)
 print( 'Ok, ' + myName + ' I am thinking of a number between 1 and 20' )
@@ -25,8 +26,8 @@ for guessestaken in range(6):
 
 if guess == number:
         guessestaken = str(guessestaken + 1)
-        number = str(number)
-        print('Well done! ' + myName + '. '+ number + ' was the correct number')
+        strnumber = str(number)
+        print('Well done ' + myName + '. '+ strnumber + ' was the correct number')
         print ('It took you '+ guessestaken + ' attempt(s) to guess this time')
     
 if guess != number:
